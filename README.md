@@ -46,7 +46,7 @@ RewriteRule (.*) /public/$1 [L]
 ```
 
 ### emulate htaccess behaviour through a middleware
-es `App\Http\Middleware\Htaccess`
+- es `App\Http\Middleware\Htaccess`
 ```
 // hide public folder from direct requests
 if (Str::startsWith($request->getRequestUri(), '/public')) {
@@ -57,3 +57,16 @@ if ($request->getRequestUri() !== '/' && Str::endsWith($request->getRequestUri()
 	return redirect(rtrim($request->getRequestUri(), "/"));
 }
 ```
+
+### update artisan
+- `/private/artisan` 
+```
+// set the public path 
+$app->bind('path.public', function() {
+    return __DIR__.'/../public';
+});
+```
+before
+```
+$kernel = $app->make(Illuminate\Contracts\Console\Kernel::class);
+``` 
