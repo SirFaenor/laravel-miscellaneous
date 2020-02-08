@@ -1,5 +1,5 @@
 Selective environment variables loading based on current host, useful for setting different configurations during development. 
-Create a file for each execution host inside `/env` folder and insert custom or overloaded variables into them.
+Create a file for each execution host inside `/env` folder (including cli) and insert custom or overwritten variables into them.
 
 Eg.
 ```

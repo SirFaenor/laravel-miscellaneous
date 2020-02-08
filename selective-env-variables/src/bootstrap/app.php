@@ -76,7 +76,7 @@ $app->afterLoadingEnvironment(function() use($app) {
         $envFile = '.cli.env';
     }
 
-    // load/overload variables from selected file
+    // load/overwrite variables from selected file
     if (file_exists($app->environmentPath().'/'.$envFile)) {
         $dotenv = Dotenv\Dotenv::create($app->environmentPath(), $envFile);
         $dotenv->overload();
