@@ -1,4 +1,5 @@
-# Miscellaneous code and files for a Laravel project.
+# Miscellaneous code and files for a Laravel.
+Collection of code used in some Laravel projects.
 Each `scr` subfolder emulates path of a default Laravel installation.
 
 ### [Deployment setup on shared hosting](deployment-shared-hosting)
